@@ -2,6 +2,7 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import { fade } from 'svelte/transition';
 </script>
 
 <svelte:head>
@@ -29,6 +30,7 @@
 </section>
 
 <style>
+	
 	section {
 		display: flex;
 		flex-direction: column;
@@ -39,8 +41,7 @@
 
 	h1 {
 		width: 100%;
-	}
-
+	} 
 	.welcome {
 		display: block;
 		position: relative;
