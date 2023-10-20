@@ -1,19 +1,23 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
-	import ButtonDarkMode from './ButtonDarkMode.svelte';
 	import { fade } from 'svelte/transition';
+	
+	import logo from '$lib/images/svelte-logo.svg';
+	import linkedin from '$lib/images/linkedin.png';
+	import github from '$lib/images/github.svg';
+	
+	import ButtonDarkMode from './ButtonDarkMode.svelte';
+	import Icon from './Icon.svelte';
 
 	$: isCollapsed = false;
 	let screenSize = 0;
 
-	function toggleCollapse(){
+	function toggleCollapse() {
 		isCollapsed = !isCollapsed;
 	}
 </script>
 
-<svelte:window bind:innerWidth={screenSize}/>
+<svelte:window bind:innerWidth={screenSize} />
 
 <nav class="flex items-center justify-between flex-wrap p-6 lg:mx-6">
 	<img src={logo} alt="Logo" class="w-8 mr-2" />
@@ -29,40 +33,35 @@
 		</button>
 	</div>
 	{#if isCollapsed == false}
-	<div transition:fade class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-		<div class="text-sm lg:flex-grow">
-			<a 
-				href="/"
-				class="block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
-				aria-current={$page.url.pathname === '/' ? 'page' : undefined}
-			>
-				Home
-			</a>
-			<a
-				href="/projects"
-				class="block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
-				aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}
-			>
-				Projects
-			</a>
-			<a
-				href="/about"
-				class="block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
-				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
-			>
-				About Me
-			</a>
+		<div transition:fade class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+			<div class="text-sm lg:flex-grow">
+				<a
+					href="/"
+					class="block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
+					aria-current={$page.url.pathname === '/' ? 'page' : undefined}
+				>
+					Home
+				</a>
+				<a
+					href="/projects"
+					class="block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
+					aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}
+				>
+					Projects
+				</a>
+				<a
+					href="/about"
+					class="block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
+					aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
+				>
+					About Me
+				</a>
+			</div>
+			<div class="flex">
+				<Icon href="https://github.com/FaikYY" src={github} alt="Github" />
+				<Icon href="https://www.linkedin.com/in/faik-yesilyaprak/" src={linkedin} alt="LinkedIn" />
+				<ButtonDarkMode />
+			</div>
 		</div>
-		<div class="flex">
-			<a
-				href="https://github.com/FaikYY"
-				class="duration-500 ease-in-out no-underline inline-block text-smleading-none hover:no-underline mt-4 lg:mt-0 mr-4"
-				target="_blank"
-			>
-				<img src={github} alt="Github" class="w-8" />
-			</a>
-			<ButtonDarkMode />
-		</div>
-	</div>
 	{/if}
 </nav>
