@@ -4,7 +4,7 @@
 	
 	import logo from '$lib/images/svelte-logo.svg';
 	import linkedin from '$lib/images/linkedin.png';
-	import github from '$lib/images/github2.svg';
+	import github from '$lib/images/github.svg';
 	import medium from '$lib/images/medium.svg';
 	import email from '$lib/images/email.png';
 	
@@ -59,7 +59,7 @@
 					About Me
 				</a>
 			</div>
-			<div class="flex">
+			<div class="flex lg:items-center">
 				<Icon href="https://faikyy.medium.com" src={medium} alt="Medium"/>
 				<Icon href="mailto:faikyesilyaprak@outlook.com" src={email} alt="Email Outlook"/>
 				<Icon href="https://github.com/FaikYY" src={github} alt="Github" />
