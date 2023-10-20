@@ -4,7 +4,9 @@
 	
 	import logo from '$lib/images/svelte-logo.svg';
 	import linkedin from '$lib/images/linkedin.png';
-	import github from '$lib/images/github.svg';
+	import github from '$lib/images/github2.svg';
+	import medium from '$lib/images/medium.svg';
+	import email from '$lib/images/email.png';
 	
 	import ButtonDarkMode from './ButtonDarkMode.svelte';
 	import Icon from './Icon.svelte';
@@ -58,6 +60,8 @@
 				</a>
 			</div>
 			<div class="flex">
+				<Icon href="https://faikyy.medium.com" src={medium} alt="Medium"/>
+				<Icon href="mailto:faikyesilyaprak@outlook.com" src={email} alt="Email Outlook"/>
 				<Icon href="https://github.com/FaikYY" src={github} alt="Github" />
 				<Icon href="https://www.linkedin.com/in/faik-yesilyaprak/" src={linkedin} alt="LinkedIn" />
 				<ButtonDarkMode />

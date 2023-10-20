@@ -30,9 +30,9 @@
 	border-color: var(--color-theme-light);
 }
 
-/* Make icons (imgs that are in an <a>) white in dark mode */
+/* Make icons (imgs that are in an <a>) white in dark mode by inverting, color should be black or something dark*/
 .dark-mode a img{
-	filter: invert(100%);
+	filter: invert(90%);
 }
 
 body {

@@ -6,7 +6,7 @@
 
 <a
 	{href}
-	class="duration-500 ease-in-out no-underline inline-block text-smleading-none hover:no-underline mt-4 lg:mt-0 mr-4"
+	class="duration-500 ease-in-out no-underline inline-block text-smleading-none hover:no-underline lg:mt-0 mr-4"
 	target="_blank"
 >
 	<img {src} {alt} class="w-8" />
