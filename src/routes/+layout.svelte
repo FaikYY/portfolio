@@ -1,8 +1,10 @@
 <script>
+	import {screenSize} from './store';
 	import Header from './Header.svelte';
 	import './styles.css';
 </script>
 
+<svelte:window bind:innerWidth={$screenSize} />
 <div class="app">
 	<Header />
 
@@ -10,8 +12,12 @@
 		<slot />
 	</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<footer class="">
+		{#if $screenSize < 450}
+		<p class="text-sm">Created by <strong>Faik Yesilyaprak</strong> <br>with <strong>SvelteKit</strong> and  🫀 🧠	</p>
+		{:else}
+		<p class="text-sm">Created by <strong>Faik Yesilyaprak</strong> with <strong>SvelteKit</strong> and 🫀 🧠	</p>
+		{/if}
 	</footer>
 </div>
 
@@ -39,10 +45,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
+		text-align: center;
 	}
 
 	@media (min-width: 480px) {

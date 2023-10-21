@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
 	
-	import logo from '$lib/images/svelte-logo.svg';
+	import leaf from '$lib/images/leaf.png';
 	import linkedin from '$lib/images/linkedin.png';
 	import github from '$lib/images/github.svg';
 	import medium from '$lib/images/medium.svg';
@@ -12,17 +12,14 @@
 	import Icon from './Icon.svelte';
 
 	$: isCollapsed = false;
-	let screenSize = 0;
 
 	function toggleCollapse() {
 		isCollapsed = !isCollapsed;
 	}
 </script>
 
-<svelte:window bind:innerWidth={screenSize} />
-
 <nav class="flex items-center justify-between flex-wrap p-8 lg:mx-10">
-	<img src={logo} alt="Logo" class="w-8 mr-2" />
+	<img src={leaf} alt="Logo" class="w-10" />
 	<div class="flex items-center flex-shrink-0 mx-3">
 		<span class="font-bold text-2xl sm:text-3xl">Faik Yesilyaprak</span>
 	</div>
@@ -39,21 +36,21 @@
 			<div class="text-sm lg:flex-grow">
 				<a
 					href="/"
-					class="text-lg sm:text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
+					class="text-lg block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
 					aria-current={$page.url.pathname === '/' ? 'page' : undefined}
 				>
 					Home
 				</a>
 				<a
 					href="/projects"
-					class="text-lg sm:text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
+					class="text-lg block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
 					aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}
 				>
 					Projects
 				</a>
 				<a
 					href="/about"
-					class="text-lg sm:text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
+					class="text-lg block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
 					aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
 				>
 					About Me

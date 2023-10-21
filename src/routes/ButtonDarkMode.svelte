@@ -1,5 +1,5 @@
 <script>
-	import { theme } from './theme';
+	import { theme } from './store';
 	import light from '$lib/images/light.svg';
 	import dark from '$lib/images/dark.png';
 
