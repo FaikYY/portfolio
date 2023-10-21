@@ -21,45 +21,45 @@
 
 <svelte:window bind:innerWidth={screenSize} />
 
-<nav class="flex items-center justify-between flex-wrap p-6 lg:mx-6">
+<nav class="flex items-center justify-between flex-wrap p-8 lg:mx-10">
 	<img src={logo} alt="Logo" class="w-8 mr-2" />
-	<div class="flex items-center flex-shrink-0 mr-6">
-		<span class="font-semibold text-xl tracking-tight">Faik Yesilyaprak</span>
+	<div class="flex items-center flex-shrink-0 mx-3">
+		<span class="font-bold text-2xl sm:text-3xl">Faik Yesilyaprak</span>
 	</div>
 	<div class="block lg:hidden">
 		<button
-			class="flex items-center px-3 py-2 border mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md"
+			class="flex items-center text-sm font-bold px-2 py-2 border duration-500 ease-in-out no-underline hover:no-underline rounded-md"
 			on:click={toggleCollapse}
 		>
 			Menu
 		</button>
 	</div>
 	{#if isCollapsed == false}
-		<div transition:fade class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+		<div transition:fade class="w-full block flex-grow lg:ml-6 lg:flex lg:items-center lg:w-auto">
 			<div class="text-sm lg:flex-grow">
 				<a
 					href="/"
-					class="block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
+					class="text-lg sm:text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
 					aria-current={$page.url.pathname === '/' ? 'page' : undefined}
 				>
 					Home
 				</a>
 				<a
 					href="/projects"
-					class="block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
+					class="text-lg sm:text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
 					aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}
 				>
 					Projects
 				</a>
 				<a
 					href="/about"
-					class="block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
+					class="text-lg sm:text-xl block mt-4 lg:inline-block lg:mt-0 mr-4 duration-500 ease-in-out no-underline hover:no-underline rounded-md p-2"
 					aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
 				>
 					About Me
 				</a>
 			</div>
-			<div class="flex lg:items-center">
+			<div class="flex items-end lg:items-center">
 				<Icon href="https://faikyy.medium.com" src={medium} alt="Medium"/>
 				<Icon href="mailto:faikyesilyaprak@outlook.com" src={email} alt="Email Outlook"/>
 				<Icon href="https://github.com/FaikYY" src={github} alt="Github" />

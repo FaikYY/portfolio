@@ -14,18 +14,18 @@
 </script>
 
 <button
-	class="flex p-0 w-12 h-10 mt-2 ml-2 lg:mt-0 justify-center items-center duration-500 ease-in-out no-underline text-sm leading-none hover:no-underline"
+	class="flex p-0 w-14 h-10 mt-2 ml-2 lg:mt-0 justify-center items-center duration-500 ease-in-out no-underline text-sm leading-none hover:no-underline"
 	on:click={toggleDarkMode}
 >
 	{#if $theme === 'Light'}
-		<img src={dark} alt="Dark Mode Icon" />
-	{:else}
 		<img src={light} alt="Light Mode Icon" />
+	{:else}
+		<img style="filter:invert(25%)" src={dark} alt="Dark Mode Icon" />
 	{/if}
 </button>
 
 <style>
 	img {
-		@apply m-0 p-0 w-8;
+		@apply m-0 p-0 w-10;
 	}
 </style>
