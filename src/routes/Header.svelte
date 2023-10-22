@@ -1,13 +1,13 @@
 <script>
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
-	
+
 	import leaf from '$lib/images/leaf.png';
 	import linkedin from '$lib/images/linkedin.png';
 	import github from '$lib/images/github.svg';
 	import medium from '$lib/images/medium.svg';
 	import email from '$lib/images/email.png';
-	
+
 	import ButtonDarkMode from './ButtonDarkMode.svelte';
 	import Icon from './Icon.svelte';
 
@@ -57,8 +57,8 @@
 				</a>
 			</div>
 			<div class="flex items-end lg:items-center">
-				<Icon href="https://faikyy.medium.com" src={medium} alt="Medium"/>
-				<Icon href="mailto:faikyesilyaprak@outlook.com" src={email} alt="Email Outlook"/>
+				<Icon href="https://faikyy.medium.com" src={medium} alt="Medium" />
+				<Icon href="mailto:faikyesilyaprak@outlook.com" src={email} alt="Email Outlook" />
 				<Icon href="https://github.com/FaikYY" src={github} alt="Github" />
 				<Icon href="https://www.linkedin.com/in/faik-yesilyaprak/" src={linkedin} alt="LinkedIn" />
 				<ButtonDarkMode />

@@ -14,9 +14,9 @@
 
 	<footer class="">
 		{#if $screenSize < 450}
-		<p class="text-sm">Created by <strong>Faik Yesilyaprak</strong> <br>with <strong>SvelteKit</strong> and  🫀 🧠	</p>
+		<p class="text-sm">Created by <strong>Faik Yesilyaprak</strong> <br>with <strong>SvelteKit</strong> and  ❤️ 🧠	</p>
 		{:else}
-		<p class="text-sm">Created by <strong>Faik Yesilyaprak</strong> with <strong>SvelteKit</strong> and 🫀 🧠	</p>
+		<p class="text-sm">Created by <strong>Faik Yesilyaprak</strong> with <strong>SvelteKit</strong> and ❤️ 🧠	</p>
 		{/if}
 	</footer>
 </div>
