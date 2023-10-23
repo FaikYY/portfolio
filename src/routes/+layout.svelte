@@ -1,56 +1,99 @@
 <script>
-	import {screenSize} from './store';
 	import Header from './Header.svelte';
-	import './styles.css';
+	import IconBox from './IconBox.svelte';
+	import '../styles.css';
 </script>
 
-<svelte:window bind:innerWidth={$screenSize} />
+<!-- //TODO: Make header sticky -->
+<!-- //TODO: Replace footer with navbar -->
+
 <div class="app">
 	<Header />
+	<IconBox />
 
 	<main>
 		<slot />
 	</main>
 
-	<footer class="">
-		{#if $screenSize < 450}
-		<p class="text-sm">Created by <strong>Faik Yesilyaprak</strong> <br>with <strong>SvelteKit</strong> and  ❤️ 🧠	</p>
-		{:else}
-		<p class="text-sm">Created by <strong>Faik Yesilyaprak</strong> with <strong>SvelteKit</strong> and ❤️ 🧠	</p>
-		{/if}
+	<footer>
+		<p class="text-sm">
+			Created by <strong>Faik Yesilyaprak</strong> with <strong>SvelteKit</strong> and ❤️ 🧠
+		</p>
 	</footer>
 </div>
 
 <style>
+	/* 
+	//SECTION: LAYOUT
+	██       █████  ██    ██  ██████  ██    ██ ████████ 
+	██      ██   ██  ██  ██  ██    ██ ██    ██    ██    
+	██      ███████   ████   ██    ██ ██    ██    ██    
+	██      ██   ██    ██    ██    ██ ██    ██    ██    
+	███████ ██   ██    ██     ██████   ██████     ██    
+	*/
 	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
+		width: 100%;
+		height: 100%;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 6em 4em 1fr 3em;
+		grid-template-areas:
+			'header header header header'
+			'iconbox iconbox iconbox iconbox'
+			'main main main main'
+			'footer footer footer footer';
+	}
+
+	:global(header) {
+		grid-area: header;
+		/* top: 0;
+		position: sticky; */
+	}
+
+	:global(#icon__box) {
+		grid-area: iconbox;
+		/* top: 0;
+		position: sticky; */
+		/* background-color: var(--color-light); */
+	}
+
+	:global(nav) {
+		display: none !important;
 	}
 
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
+		grid-area: main;
 	}
 
 	footer {
+		grid-area: footer;
+		background-color: bisque;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 12px;
-		text-align: center;
+
+		bottom: 0;
+		position: sticky;
 	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
+	/* //SECTION: sm size: Phone */
+	@media (min-width: 640px) {
+	}
+
+	/* //SECTION: md size: Tablet */
+	@media (min-width: 768px) {
+	}
+
+	/* //SECTION: lg size: Laptop Small */
+	@media (min-width: 1024px) {
+	}
+
+	/* //SECTION: xl size: Laptop Medium */
+	@media (min-width: 1280px) {
+	}
+
+	/* //SECTION: 2xl size: Laptop Large */
+	@media (min-width: 1536px) {
 	}
 </style>
