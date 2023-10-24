@@ -83,6 +83,22 @@ section{
 	padding: 2rem;
 }
 
+/* //NOTE: Remove the blue weird blue box on mobile */
+button,
+textarea,
+input,
+select,
+a,
+div {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .input,
 button {
 	font-size: inherit;
