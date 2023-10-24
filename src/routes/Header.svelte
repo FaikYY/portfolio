@@ -1,7 +1,6 @@
 <script>
-	import { page } from '$app/stores';
-
 	import leaf from '$lib/images/leaf.png';
+	import Navbar from './Navbar.svelte';
 
 	$: isCollapsed = false;
 
@@ -12,35 +11,11 @@
 
 <!-- //TODO: Sample todo -->
 
-<header class="flex items-center justify-center">
-	<div id="logo" class=" flex items-center justify-center text-3xl font-bold">Faik Yesilyaprak</div>
-
+<header class="">
+	<img id="leaf__icon" src={leaf} alt="Logo" />
+	<div id="logo" class=" flex items-center justify-center text-2xl font-bold">Faik Yesilyaprak</div>
 	<!-- MENU ITEMS DESKTOP-->
-	<nav class="w-full flex-grow lg:ml-6 lg:flex lg:w-auto lg:items-center">
-		<div class="text-sm lg:flex-grow">
-			<a
-				href="/"
-				class="mr-4 mt-4 block rounded-md p-2 text-lg no-underline duration-500 ease-in-out hover:no-underline lg:mt-0 lg:inline-block"
-				aria-current={$page.url.pathname === '/' ? 'page' : undefined}
-			>
-				Home
-			</a>
-			<a
-				href="/projects"
-				class="mr-4 mt-4 block rounded-md p-2 text-lg no-underline duration-500 ease-in-out hover:no-underline lg:mt-0 lg:inline-block"
-				aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}
-			>
-				Projects
-			</a>
-			<a
-				href="/about"
-				class="mr-4 mt-4 block rounded-md p-2 text-lg no-underline duration-500 ease-in-out hover:no-underline lg:mt-0 lg:inline-block"
-				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
-			>
-				About Me
-			</a>
-		</div>
-	</nav>
+	<Navbar />
 </header>
 
 <style>
@@ -49,9 +24,19 @@
 		top: 0;
 		position: sticky;
 		box-shadow: 0 6px 6px rgba(29, 48, 64, 0.1);
+		max-width: 100vw;
+
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
 	}
 
-	nav {
-		display: none !important;
+	#logo {
+		/* background-color: red; */
+		text-align: center;
+	}
+
+	#leaf__icon {
+		scale: 50%;
 	}
 </style>
