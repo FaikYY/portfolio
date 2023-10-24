@@ -24,6 +24,7 @@
 		href="/"
 		class="menu__item mr-4 mt-4 block rounded-md p-2 text-lg no-underline ease-in-out hover:no-underline lg:mt-0 lg:inline-block"
 		aria-current={$page.url.pathname === '/' ? 'page' : undefined}
+		on:click={toggleMenu}
 	>
 		Home
 	</a>
@@ -31,6 +32,7 @@
 		href="/projects"
 		class="menu__item mr-4 mt-4 block rounded-md p-2 text-lg no-underline ease-in-out hover:no-underline lg:mt-0 lg:inline-block"
 		aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}
+		on:click={toggleMenu}
 	>
 		Projects
 	</a>
@@ -38,6 +40,7 @@
 		href="/about"
 		class="menu__item mr-4 mt-4 block rounded-md p-2 text-lg no-underline ease-in-out hover:no-underline lg:mt-0 lg:inline-block"
 		aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
+		on:click={toggleMenu}
 	>
 		About Me
 	</a>
