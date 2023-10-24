@@ -17,8 +17,8 @@
 	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
-	--color-light: rgb(242, 240, 237);
-	--color-dark: rgb(29, 48, 64);
+	--color-background: rgb(244, 242, 240);
+	--color-foreground: rgb(29, 48, 64);
 	/* --color-theme-light: rgb(29, 48, 64); */
 	/* --color-theme-dark: rgb(191, 194, 199); */
 	font-family: var(--font-body);
@@ -44,9 +44,9 @@ body {
 	margin: 0;
 }
 
-.app {
-	background-color: var(--color-light);
-	color: var(--color-dark);
+.app, header, nav, footer, main, section, #icon__box {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
 	transition: background-color 0.3s;
 }
 
@@ -81,8 +81,8 @@ button {
 	font-size: inherit;
 	font-family: inherit;
 	border-radius: 10px;
-	background-color: var(--color-dark);
-	color: var(--color-dark);
+	background-color: var(--color-background);
+	color: var(--color-foreground);
 }
 
 button:focus:not(:focus-visible) {
@@ -98,26 +98,11 @@ button:focus:not(:focus-visible) {
 ██   ██ ██   ██ ██   ██ ██  ██      ██  ██  ██ ██    ██ ██   ██ ██      
 ██████  ██   ██ ██   ██ ██   ██     ██      ██  ██████  ██████  ███████ 
 */
-.dark-mode {
-	background-color: var(--color-dark);
-	color: var(--color-light);
-	border-color: var(--color-dark);
+.dark__mode {
+	--color-background: rgb(29, 48, 64);
+	--color-foreground: rgb(244, 242, 240);
 }
 
-.dark-mode .app {
-	background-color: var(--color-dark);
-	color: var(--color-light);
-	transition: background-color 0.3s;
-}
-
-/* When dark mode is applied, buttons are gonna be light colored */
-.dark-mode button {
-	background-color: var(--color-light);
-	color: var(--color-light);
-	border-color: var(--color-light);
-}
-
-/* Make icons (imgs that are in an <a>) white in dark mode by inverting, color should be black or something dark*/
-.dark-mode a img {
+.dark__mode .icon{
 	filter: invert(90%);
 }

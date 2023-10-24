@@ -13,9 +13,7 @@
 <!-- //TODO: Sample todo -->
 
 <header class="flex items-center justify-center">
-	<div class=" flex items-center justify-center text-3xl font-bold">
-		Faik <img src={leaf} alt="Logo" class="ml-2 scale-75" />
-	</div>
+	<div id="logo" class=" flex items-center justify-center text-3xl font-bold">Faik Yesilyaprak</div>
 
 	<!-- MENU ITEMS DESKTOP-->
 	<nav class="w-full flex-grow lg:ml-6 lg:flex lg:w-auto lg:items-center">
@@ -44,3 +42,16 @@
 		</div>
 	</nav>
 </header>
+
+<style>
+	header {
+		grid-area: header;
+		top: 0;
+		position: sticky;
+		box-shadow: 0 6px 6px rgba(29, 48, 64, 0.1);
+	}
+
+	nav {
+		display: none !important;
+	}
+</style>

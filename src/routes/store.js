@@ -1,4 +1,4 @@
 import { writable } from 'svelte/store';
 
-export const theme = writable('Light');
+export const isDarkMode = writable(false);
 export const screenSize = writable(0);

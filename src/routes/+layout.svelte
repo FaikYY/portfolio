@@ -2,12 +2,13 @@
 	import Header from './Header.svelte';
 	import IconBox from './IconBox.svelte';
 	import '../styles.css';
+	import { isDarkMode } from './store';
 </script>
 
 <!-- //TODO: Make header sticky -->
 <!-- //TODO: Replace footer with navbar -->
 
-<div class="app">
+<div class="app" class:dark-mode-shadow={$isDarkMode}>
 	<Header />
 	<IconBox />
 
@@ -37,29 +38,12 @@
 
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: 6em 4em 1fr 3em;
+		grid-template-rows: minmax(4em, auto) minmax(2em, auto) 1fr minmax(4em, auto);
 		grid-template-areas:
 			'header header header header'
-			'iconbox iconbox iconbox iconbox'
+			'footer footer footer footer'
 			'main main main main'
-			'footer footer footer footer';
-	}
-
-	:global(header) {
-		grid-area: header;
-		/* top: 0;
-		position: sticky; */
-	}
-
-	:global(#icon__box) {
-		grid-area: iconbox;
-		/* top: 0;
-		position: sticky; */
-		/* background-color: var(--color-light); */
-	}
-
-	:global(nav) {
-		display: none !important;
+			'iconbox iconbox iconbox iconbox';
 	}
 
 	main {
@@ -68,13 +52,9 @@
 
 	footer {
 		grid-area: footer;
-		background-color: bisque;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
-		bottom: 0;
-		position: sticky;
 	}
 
 	/* //SECTION: sm size: Phone */
