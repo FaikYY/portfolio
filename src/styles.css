@@ -55,25 +55,31 @@ a {
 }
 
 p {
-	font-size: 1.25rem;
+	font-size: 1rem;
 	font-weight: 500;
-	text-align: justify;
 	line-height: 2rem;
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 1.75rem;
 	font-weight: 800;
 }
 
 h2 {
-	font-size: 1.75rem;
+	font-size: 1.50rem;
 	font-weight: 700;
 }
 
 h3 {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 600;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 2rem;
 }
 
 .input,

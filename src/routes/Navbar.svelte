@@ -76,7 +76,6 @@
 	.menu__item:hover {
 		background-color: #cfd8dc;
 	}
-	/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
 
 	/* //SECTION: Draw the hamburger menu  */
 	.menu__btn {

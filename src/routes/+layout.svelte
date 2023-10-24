@@ -18,7 +18,7 @@
 
 	<footer>
 		<p class="text-sm">
-			Created by <strong>Faik Yesilyaprak</strong> with <strong>SvelteKit</strong> and ❤️ 🧠
+			Created by using <strong>SvelteKit</strong> with ❤️ 🧠
 		</p>
 	</footer>
 </div>
@@ -55,6 +55,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding: 1rem;
+		padding-bottom: 0;
 	}
 
 	/* //SECTION: sm size: Phone */
