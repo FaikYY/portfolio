@@ -9,8 +9,7 @@
 <section class="flex flex-col items-start p-8 sm:items-center sm:justify-center">
 	<h1 class="text-left lg:hidden">👋</h1>
 	<h1 class="font-bold">Welcome</h1>
-	<h2>to my</h2>
-	<h3>SvelteKit Portfolio</h3>
+	<h3>to my SvelteKit Portfolio</h3>
 	<p class="my-4">
 		I can explain. It's very valuable. Shut up and get to the point! There's one way and only one
 		way to determine if an animal is intelligent. Dissect its brain! And I'd do it again! And

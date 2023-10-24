@@ -22,7 +22,7 @@
 >
 	<a
 		href="/"
-		class="menu__item mr-4 mt-4 block rounded-md p-2 text-lg no-underline ease-in-out hover:no-underline lg:mt-0 lg:inline-block"
+		class="menu__item"
 		aria-current={$page.url.pathname === '/' ? 'page' : undefined}
 		on:click={toggleMenu}
 	>
@@ -30,7 +30,7 @@
 	</a>
 	<a
 		href="/projects"
-		class="menu__item mr-4 mt-4 block rounded-md p-2 text-lg no-underline ease-in-out hover:no-underline lg:mt-0 lg:inline-block"
+		class="menu__item"
 		aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}
 		on:click={toggleMenu}
 	>
@@ -38,7 +38,7 @@
 	</a>
 	<a
 		href="/about"
-		class="menu__item mr-4 mt-4 block rounded-md p-2 text-lg no-underline ease-in-out hover:no-underline lg:mt-0 lg:inline-block"
+		class="menu__item"
 		aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
 		on:click={toggleMenu}
 	>
@@ -62,22 +62,23 @@
 		margin: 0;
 		padding: 80px 0;
 		list-style: none;
-		background-color: #eceff1;
-		box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+		background-color: var(--color-background);
+		box-shadow: 2px 2px 6px rgba(29, 48, 64, 0.2);
 		transition: 0.3s ease;
+		border-radius: 10px;
 	}
 	.menu__item {
 		display: block;
+		margin-top: 1rem;
+		font-size: 1rem;
 		padding: 12px 24px;
-		color: #333;
-		font-family: 'Roboto', sans-serif;
-		font-size: 20px;
 		font-weight: 600;
 		text-decoration: none;
 		transition: 0.3s ease;
 	}
 	.menu__item:hover {
-		background-color: #cfd8dc;
+		background-color: var(--color-foreground);
+		color: var(--color-background);
 	}
 
 	/* //SECTION: Draw the hamburger menu  */
@@ -96,9 +97,10 @@
 	}
 
 	.hamburger__bar {
+		border-radius: 10px;
 		height: 4px;
 		width: 26px;
-		background-color: #616161;
+		background-color: var(--color-foreground);
 		transition: 0.3s ease;
 	}
 
