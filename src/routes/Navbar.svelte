@@ -88,6 +88,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		align-items: center;
 		padding: 5px;
 		transition: 0.3s ease;
 	}

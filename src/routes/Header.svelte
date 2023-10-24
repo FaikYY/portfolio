@@ -37,6 +37,6 @@
 	}
 
 	#leaf__icon {
-		scale: 50%;
+		width: 26px;
 	}
 </style>
