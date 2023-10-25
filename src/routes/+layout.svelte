@@ -18,7 +18,10 @@
 
 	<footer>
 		<p class="text-sm">
-			Created by using <strong>SvelteKit</strong> with ❤️ 🧠
+			Created by using <a
+				style="text-decoration-line: underline; text-decoration-thickness: .1rem;  text-decoration-style:underline;"
+				href="https://kit.svelte.dev/">SvelteKit</a
+			> with ❤️ 🧠
 		</p>
 	</footer>
 </div>

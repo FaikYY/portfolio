@@ -6,10 +6,13 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
+<!-- //TODO: Add website and links to the words I am using to increase SEO -->
+<!-- //TODO: Sample -->
+
 <section class="flex flex-col items-start p-8 sm:items-center sm:justify-center">
 	<h1 class="text-left lg:hidden">👋</h1>
 	<h1 class="font-bold">Welcome</h1>
-	<h3>to my SvelteKit Portfolio</h3>
+	<h3>to my Portfolio</h3>
 	<p class="my-4">
 		I can explain. It's very valuable. Shut up and get to the point! There's one way and only one
 		way to determine if an animal is intelligent. Dissect its brain! And I'd do it again! And

@@ -11,7 +11,7 @@
 
 <!-- //TODO: Sample todo -->
 
-<header class="">
+<header>
 	<img id="leaf__icon" src={leaf} alt="Logo" />
 	<div id="logo" class=" flex items-center justify-center text-2xl font-bold">Faik Yesilyaprak</div>
 	<!-- MENU ITEMS DESKTOP-->
