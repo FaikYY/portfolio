@@ -48,12 +48,25 @@ body {
 header,
 nav,
 footer,
-main,
-section,
-#icon__box {
+main {
 	background-color: var(--color-background);
 	color: var(--color-foreground);
 	transition: background-color 0.3s;
+}
+
+h1 {
+	font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+	font-weight: 800;
+}
+
+h2 {
+	font-size: clamp(1.5rem, 3vw, 2rem);
+	font-weight: 700;
+}
+
+h3 {
+	font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+	font-weight: 600;
 }
 
 a {
@@ -62,24 +75,9 @@ a {
 }
 
 p {
-	font-size: 1rem;
+	font-size: clamp(1rem, 2vw, 1.5rem);
 	font-weight: 500;
 	line-height: 2rem;
-}
-
-h1 {
-	font-size: 1.75rem;
-	font-weight: 800;
-}
-
-h2 {
-	font-size: 1.5rem;
-	font-weight: 700;
-}
-
-h3 {
-	font-size: 1.25rem;
-	font-weight: 600;
 }
 
 section {

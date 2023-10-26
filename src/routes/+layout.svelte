@@ -50,6 +50,7 @@
 	}
 
 	main {
+		height: 100%;
 		grid-area: main;
 	}
 
@@ -63,7 +64,16 @@
 	}
 
 	/* //SECTION: sm size: Phone */
-	@media (min-width: 640px) {
+	@media (640px <= width <= 1080px) {
+		.app {
+			grid-template-rows: minmax(4em, auto) minmax(2em, auto) 1fr minmax(4em, auto);
+			grid-template-columns: 1fr 1fr 1fr 10vw;
+			grid-template-areas:
+				'header header header iconbox'
+				'footer footer footer iconbox'
+				'main main main iconbox'
+				'main main main iconbox';
+		}
 	}
 
 	/* //SECTION: md size: Tablet */

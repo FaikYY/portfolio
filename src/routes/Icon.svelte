@@ -9,5 +9,11 @@
 	class="text-smleading-none inline-block no-underline duration-500 ease-in-out hover:no-underline"
 	target="_blank"
 >
-	<img {src} {alt} class="icon mx-2 w-8" />
+	<img {src} {alt} class="icon mx-2" />
 </a>
+
+<style>
+	img {
+		width: clamp(2rem, 4vw, 4rem);
+	}
+</style>

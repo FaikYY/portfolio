@@ -20,10 +20,28 @@
 <style>
 	@import '../styles.css';
 	#icon__box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		grid-area: iconbox;
+		position: fixed;
 		bottom: 0;
 		width: 100%;
-		position: fixed;
-		box-shadow: 0 -6px 6px rgba(29, 48, 64, 0.1);
+		box-shadow: 0 -2px 6px rgba(29, 48, 64, 0.1);
+		background-color: var(--color-background);
+	}
+
+	@media (640px <= width <= 840px) {
+		#icon__box {
+			z-index: 2;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 10vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			box-shadow: 0 10px 10px rgba(29, 48, 64, 0.1);
+		}
 	}
 </style>
