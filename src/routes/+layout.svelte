@@ -19,6 +19,7 @@
 	<footer>
 		<p>
 			Created by using <a
+				target="_blank"
 				style="text-decoration-line: underline; text-decoration-thickness: .1rem;  text-decoration-style:underline;"
 				href="https://kit.svelte.dev/">SvelteKit</a
 			> with ❤️ 🧠
