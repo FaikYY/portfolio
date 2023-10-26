@@ -17,7 +17,7 @@
 	</main>
 
 	<footer>
-		<p class="text-sm">
+		<p>
 			Created by using <a
 				style="text-decoration-line: underline; text-decoration-thickness: .1rem;  text-decoration-style:underline;"
 				href="https://kit.svelte.dev/">SvelteKit</a
@@ -63,13 +63,17 @@
 		padding-bottom: 0;
 	}
 
+	footer p {
+		font-size: clamp(0.75rem, 1.5vw, 1rem);
+	}
+
 	/* //SECTION: sm size: Phone */
-	@media (640px <= width <= 1080px) {
+	@media (640px <= width <= 840px) {
 		.app {
 			grid-template-rows: minmax(4em, auto) minmax(2em, auto) 1fr minmax(4em, auto);
-			grid-template-columns: 1fr 1fr 1fr 10vw;
+			grid-template-columns: 1fr 1fr 1fr 7.5vw;
 			grid-template-areas:
-				'header header header iconbox'
+				'header header header header'
 				'footer footer footer iconbox'
 				'main main main iconbox'
 				'main main main iconbox';

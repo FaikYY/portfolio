@@ -37,10 +37,11 @@
 			top: 0;
 			right: 0;
 			height: 100%;
-			width: 10vw;
+			width: 7.5vw;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-around;
+			justify-content: center;
+			gap: 6em;
 			box-shadow: 0 10px 10px rgba(29, 48, 64, 0.1);
 		}
 	}

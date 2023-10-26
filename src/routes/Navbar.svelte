@@ -44,6 +44,23 @@
 	>
 		About Me
 	</a>
+
+	<a
+		href="/resume"
+		class="menu__item"
+		aria-current={$page.url.pathname === '/resume' ? 'page' : undefined}
+		on:click={toggleMenu}
+	>
+		Resume
+	</a>
+	<a
+		href="/faqs"
+		class="menu__item"
+		aria-current={$page.url.pathname === '/faqs' ? 'page' : undefined}
+		on:click={toggleMenu}
+	>
+		FAQs
+	</a>
 </nav>
 
 <style>
@@ -78,7 +95,10 @@
 		text-decoration: none;
 		transition: 0.3s ease;
 	}
+
 	.menu__item:hover {
+		padding: 12px 24px;
+		border-radius: 8px;
 		background-color: var(--color-foreground);
 		color: var(--color-background);
 	}
@@ -122,11 +142,13 @@
 		transform: rotate(90deg) translate(-14px, -4px);
 	}
 
-	@media (640px <= width <= 1080px) {
+	@media (640px <= width <= 840px) {
 		.menu__item {
 			margin: 0;
-			padding: 12px 34px;
+			font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+			padding: 0;
 		}
+
 		.hamburger__btn {
 			display: none;
 		}
@@ -134,7 +156,7 @@
 		nav {
 			position: static;
 			display: flex;
-			justify-content: center;
+			justify-content: space-around;
 			align-items: center;
 			list-style: none;
 			flex-grow: 6;
@@ -143,6 +165,9 @@
 			border-radius: 10px;
 			height: 10vw;
 			padding: 0;
+			padding-left: 4rem;
+			padding-right: 1rem;
+			/* background-color: red; */
 		}
 	}
 </style>

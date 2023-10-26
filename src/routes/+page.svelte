@@ -7,10 +7,10 @@
 </svelte:head>
 
 <!-- //TODO: Add website and links to the words I am using to increase SEO -->
-<!-- //TODO: Sample -->
+<!-- //TODO: Fix font size on tablet mode -->
+<!-- //TODO: Fix media values based on tablet size instead of 1080px -->
 
-<section class="flex flex-col items-start p-8 sm:items-center sm:justify-center">
-	<h1 class="text-left lg:hidden">👋</h1>
+<section>
 	<h1 class="font-bold">Welcome</h1>
 	<h3>to my Portfolio</h3>
 	<p class="my-4">

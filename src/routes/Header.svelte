@@ -42,7 +42,7 @@
 		width: 26px;
 	}
 
-	@media (640px <= width <= 1080px) {
+	@media (640px <= width <= 840px) {
 		header {
 			position: sticky;
 			/* height: 10vw; */
@@ -51,20 +51,17 @@
 			align-items: center;
 			box-shadow: 0 6px 6px rgba(29, 48, 64, 0.05);
 			padding-left: 2rem;
-		}
-
-		:global(.menu__box) {
-			flex-grow: 4;
-			display: none;
+			z-index: 4;
 		}
 
 		#logo {
 			flex-grow: 2;
+			font-size: clamp(1.25rem, 2vw, 1.75rem);
 		}
 
 		#icon__leaf {
-			width: 40px;
-			height: 40px;
+			width: 30px;
+			height: 30px;
 		}
 	}
 </style>

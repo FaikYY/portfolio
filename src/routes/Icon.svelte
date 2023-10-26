@@ -14,6 +14,6 @@
 
 <style>
 	img {
-		width: clamp(2rem, 4vw, 4rem);
+		width: clamp(2rem, 3vw, 2.5rem);
 	}
 </style>
