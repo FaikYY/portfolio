@@ -9,7 +9,6 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<!-- <div on:click={toggleMenu} class="menu__btn" class:burger__animation={$isHamburgerExpanded} /> -->
 <div on:click={toggleMenu} class="hamburger__btn" class:burger__animation={$isHamburgerExpanded}>
 	<div class="hamburger__bar"></div>
 	<div class="hamburger__bar"></div>
@@ -68,7 +67,9 @@
 		left: 0 !important;
 	}
 
-	/* //SECTION: Mobile Menu and Items  */
+	/* 
+	//SECTION: Mobile Menu and Items  
+	*/
 	nav {
 		display: block;
 		position: fixed;
@@ -103,7 +104,9 @@
 		color: var(--color-background);
 	}
 
-	/* //SECTION: Draw the hamburger menu  */
+	/* 
+	//SECTION: Draw the hamburger menu 
+	 */
 	.hamburger__btn {
 		right: 0;
 		width: 26px;
@@ -142,10 +145,11 @@
 		transform: rotate(90deg) translate(-14px, -4px);
 	}
 
-	@media (640px <= width <= 840px) {
+	/* NOTE: Until the width is 640px */
+	@media (640px <= width) {
 		.menu__item {
 			margin: 0;
-			font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+			font-size: clamp(0.75rem, 1.5vw, 1.1rem);
 			padding: 0;
 		}
 
@@ -163,10 +167,16 @@
 			box-shadow: none;
 			transition: 0.3s ease;
 			border-radius: 10px;
-			height: 10vw;
+			/* height: 10vw; */
 			padding: 0;
-			padding-left: 4rem;
-			padding-right: 1rem;
+		}
+	}
+
+	@media (width >= 640px) {
+		nav {
+			justify-content: space-around;
+			padding: 0;
+			flex-grow: minmax(6, 12);
 			/* background-color: red; */
 		}
 	}

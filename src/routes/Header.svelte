@@ -64,4 +64,29 @@
 			height: 30px;
 		}
 	}
+
+	@media (width >= 840px) {
+		header {
+			position: sticky;
+			/* height: 10vw; */
+			width: auto-fit;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			box-shadow: 0 3px 6px rgba(29, 48, 64, 0.05);
+			padding-left: clamp(2rem, 3rem, 4rem);
+			z-index: 4;
+			/* background-color: red; */
+		}
+
+		#logo {
+			flex-grow: clamp(0.25, 0.5, 0.75);
+			font-size: clamp(1.25rem, 2vw, 1.75rem);
+		}
+
+		#icon__leaf {
+			width: 30px;
+			height: 30px;
+		}
+	}
 </style>

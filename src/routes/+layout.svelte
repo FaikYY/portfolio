@@ -29,12 +29,7 @@
 
 <style>
 	/* 
-	//SECTION: LAYOUT
-	██       █████  ██    ██  ██████  ██    ██ ████████ 
-	██      ██   ██  ██  ██  ██    ██ ██    ██    ██    
-	██      ███████   ████   ██    ██ ██    ██    ██    
-	██      ██   ██    ██    ██    ██ ██    ██    ██    
-	███████ ██   ██    ██     ██████   ██████     ██    
+	//SECTION: LAYOUT 
 	*/
 	.app {
 		width: 100vw;
@@ -68,7 +63,7 @@
 		font-size: clamp(0.75rem, 1.5vw, 1rem);
 	}
 
-	/* //SECTION: sm size: Phone */
+	/* //SECTION: sm size: Tablet */
 	@media (640px <= width <= 840px) {
 		.app {
 			grid-template-rows: minmax(4em, auto) minmax(2em, auto) 1fr minmax(4em, auto);
@@ -81,8 +76,17 @@
 		}
 	}
 
-	/* //SECTION: md size: Tablet */
-	@media (min-width: 768px) {
+	/* //SECTION: md size: Big Tablet - Laptop PC */
+	@media (width > 840px) {
+		.app {
+			grid-template-columns: 1fr 1fr 1fr 1fr 4rem;
+			grid-template-rows: minmax(6em, auto) minmax(4em, auto) 1fr minmax(2em, auto);
+			grid-template-areas:
+				'header header header iconbox iconbox'
+				'main main main main main'
+				'main main main main main'
+				'footer footer footer footer footer';
+		}
 	}
 
 	/* //SECTION: lg size: Laptop Small */

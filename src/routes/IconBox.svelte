@@ -45,4 +45,19 @@
 			box-shadow: 0 10px 10px rgba(29, 48, 64, 0.1);
 		}
 	}
+
+	@media (width > 840px) {
+		#icon__box {
+			position: sticky;
+			height: 100%;
+			top: 0;
+			/* padding-right: 1rem; */
+			/* padding-left: 2rem; */
+			justify-content: space-around;
+			box-shadow: 0 3px 6px rgba(29, 48, 64, 0.05);
+			padding-right: clamp(1rem, 4vw, 4rem);
+			padding-left: clamp(1rem, 4vw, 4rem);
+			gap: 0;
+		}
+	}
 </style>
