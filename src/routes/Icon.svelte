@@ -4,12 +4,8 @@
 	export let alt = '';
 </script>
 
-<a
-	{href}
-	class="text-smleading-none inline-block no-underline duration-500 ease-in-out hover:no-underline"
-	target="_blank"
->
-	<img {src} {alt} class="icon mx-2" />
+<a {href} target="_blank">
+	<img class="icon" {src} {alt} />
 </a>
 
 <style>

@@ -4,9 +4,9 @@
 	import medium from '$lib/images/medium.svg';
 	import email from '$lib/images/email.png';
 
-	import ButtonDarkMode from './ButtonDarkMode.svelte';
+	import DarkModeSwitch from './DarkModeSwitch.svelte';
 	import Icon from './Icon.svelte';
-	import '../styles.css';
+	import '../app.css';
 </script>
 
 <div id="icon__box" class=" flex items-center justify-center gap-6 py-1">
@@ -14,50 +14,43 @@
 	<Icon href="mailto:faikyesilyaprak@outlook.com" src={email} alt="Email Outlook" />
 	<Icon href="https://github.com/FaikYY" src={github} alt="Github" />
 	<Icon href="https://www.linkedin.com/in/faik-yesilyaprak/" src={linkedin} alt="LinkedIn" />
-	<ButtonDarkMode />
+	<DarkModeSwitch />
 </div>
 
 <style>
-	@import '../styles.css';
+	@import '../app.css';
 	#icon__box {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-around;
 		grid-area: iconbox;
 		position: fixed;
-		bottom: 0;
-		width: 100%;
-		box-shadow: 0 -2px 6px rgba(29, 48, 64, 0.1);
+		bottom: 1rem;
+		left: 50%;
+		width: 75%;
+		transform: translate(-50%, -50%);
+		border-radius: 0.5rem;
+		box-shadow: 0px 0px 6px 3px rgba(29, 48, 64, 0.05);
 		background-color: var(--color-background);
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
 	}
 
-	@media (640px <= width <= 840px) {
+	@media (min-width: 640px) {
 		#icon__box {
-			z-index: 2;
-			top: 0;
-			right: 0;
-			height: 100%;
-			width: 7.5vw;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			gap: 6em;
-			box-shadow: 0 10px 10px rgba(29, 48, 64, 0.1);
+			width: 50%;
 		}
 	}
 
-	@media (width > 840px) {
+	@media (min-width: 1000px) {
 		#icon__box {
-			position: sticky;
-			height: 100%;
-			top: 0;
-			/* padding-right: 1rem; */
-			/* padding-left: 2rem; */
-			justify-content: space-around;
-			box-shadow: 0 3px 6px rgba(29, 48, 64, 0.05);
-			padding-right: clamp(1rem, 4vw, 4rem);
-			padding-left: clamp(1rem, 4vw, 4rem);
-			gap: 0;
+			width: 40%;
+		}
+	}
+
+	@media (min-width: 1360px) {
+		#icon__box {
+			width: 25%;
 		}
 	}
 </style>

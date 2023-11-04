@@ -1,103 +1,106 @@
 <script>
-	import Header from './Header.svelte';
+	import { page } from '$app/stores';
+	import '../app.css';
 	import IconBox from './IconBox.svelte';
-	import '../styles.css';
-	import { isDarkMode } from './store';
 </script>
 
-<!-- //TODO: Make header sticky -->
-<!-- //TODO: Replace footer with navbar -->
+<!-- TODO: Add the leaf icon on the header -->
 
-<div class="app" class:dark-mode-shadow={$isDarkMode}>
-	<Header />
-	<IconBox />
+<div class="container">
+	<header>
+		<div id="logo">Faik Yesilyaprak</div>
+
+		<nav>
+			<a href="/" aria-current={$page.url.pathname === '/' ? 'page' : undefined}> Home </a>
+			<a href="/projects" aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}>
+				Projects
+			</a>
+			<a href="/about" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+				About Me
+			</a>
+
+			<a href="/faqs" aria-current={$page.url.pathname === '/faqs' ? 'page' : undefined}> FAQs </a>
+		</nav>
+	</header>
 
 	<main>
 		<slot />
+		<footer>Created by Faik Yesilyaprak with ❤️ 🧠</footer>
 	</main>
 
-	<footer>
-		<p>
-			Created by using <a
-				target="_blank"
-				style="text-decoration-line: underline; text-decoration-thickness: .1rem;  text-decoration-style:underline;"
-				href="https://kit.svelte.dev/">SvelteKit</a
-			> with ❤️ 🧠
-		</p>
-	</footer>
+	<IconBox />
 </div>
 
 <style>
-	/* 
-	//SECTION: LAYOUT 
-	*/
-	.app {
-		width: 100vw;
-		min-height: 100vh;
-
+	.container {
+		/* background: red; */
+		gap: calc(16px + 1vw);
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: minmax(4em, auto) minmax(2em, auto) 1fr minmax(4em, auto);
-		grid-template-areas:
-			'header header header header'
-			'footer footer footer footer'
-			'main main main main'
-			'iconbox iconbox iconbox iconbox';
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: calc(7.5vh + 7.5vw) 1fr;
+		width: 100vw;
+		height: 100%;
+		min-height: 100%;
+		box-sizing: border-box;
+		overflow-x: hidden;
+	}
+
+	header {
+		background-color: var(--color-background);
+		grid-column: 2/12;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		display: flex;
+		flex-direction: column;
+
+		position: sticky;
+		top: 0;
+	}
+
+	nav {
+		/*   background: purple; */
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	a {
+		font-weight: 700;
+		transition: var(--transition);
+		background-color: var(--color-background);
+		color: var(--color-foreground);
+	}
+
+	a:hover {
+		padding: 0.75rem 1.25rem;
+		border-radius: 0.5rem;
+		background-color: var(--color-foreground);
+		color: var(--color-background);
 	}
 
 	main {
+		/* background: blue; */
+		grid-column: 2/12;
+	}
+
+	#logo {
+		/* background: yellow; */
+		width: 100%;
 		height: 100%;
-		grid-area: main;
+
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
 	}
 
 	footer {
-		grid-area: footer;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 1rem;
-		padding-bottom: 0;
-	}
-
-	footer p {
-		font-size: clamp(0.75rem, 1.5vw, 1rem);
-	}
-
-	/* //SECTION: sm size: Tablet */
-	@media (640px <= width <= 840px) {
-		.app {
-			grid-template-rows: minmax(4em, auto) minmax(2em, auto) 1fr minmax(4em, auto);
-			grid-template-columns: 1fr 1fr 1fr 7.5vw;
-			grid-template-areas:
-				'header header header header'
-				'footer footer footer iconbox'
-				'main main main iconbox'
-				'main main main iconbox';
-		}
-	}
-
-	/* //SECTION: md size: Big Tablet - Laptop PC */
-	@media (width > 840px) {
-		.app {
-			grid-template-columns: 1fr 1fr 1fr 1fr 4rem;
-			grid-template-rows: minmax(6em, auto) minmax(4em, auto) 1fr minmax(2em, auto);
-			grid-template-areas:
-				'header header header iconbox iconbox'
-				'main main main main main'
-				'main main main main main'
-				'footer footer footer footer footer';
-		}
-	}
-
-	/* //SECTION: lg size: Laptop Small */
-	@media (min-width: 1024px) {
-	}
-
-	/* //SECTION: xl size: Laptop Medium */
-	@media (min-width: 1280px) {
-	}
-
-	/* //SECTION: 2xl size: Laptop Large */
-	@media (min-width: 1536px) {
+		margin: 1rem;
 	}
 </style>

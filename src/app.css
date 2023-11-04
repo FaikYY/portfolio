@@ -1,0 +1,136 @@
+:root {
+	--font-body: monospace, Arial, sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--color-background: rgb(244, 242, 240);
+	--color-foreground: rgb(29, 48, 64);
+	--transition: ease 0.3s;
+	font-family: var(--font-body);
+}
+
+body,
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100%;
+	min-height: 100%;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+html > * {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+	transition: var(--transition);
+}
+
+header,
+main,
+section,
+footer,
+nav {
+	transition: var(--transition);
+}
+
+/* Base font size for the entire document */
+html {
+	font-size: 16px; /* 1rem = 16px */
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h4 {
+	font-size: 1.125rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 0.875rem;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.75rem;
+}
+
+ul,
+ol {
+	font-size: 1rem;
+}
+
+a {
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+
+@media (min-width: 640px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1000px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 2000px) {
+	html {
+		font-size: 24px;
+	}
+}
+
+/* //NOTE: These remove the blue weird blue box on mobile */
+button,
+textarea,
+input,
+select,
+div {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+/* 
+//SECTION DARK MODE
+██████   █████  ██████  ██   ██     ███    ███  ██████  ██████  ███████ 
+██   ██ ██   ██ ██   ██ ██  ██      ████  ████ ██    ██ ██   ██ ██      
+██   ██ ███████ ██████  █████       ██ ████ ██ ██    ██ ██   ██ █████   
+██   ██ ██   ██ ██   ██ ██  ██      ██  ██  ██ ██    ██ ██   ██ ██      
+██████  ██   ██ ██   ██ ██   ██     ██      ██  ██████  ██████  ███████ 
+*/
+.dark__mode {
+	--color-background: rgb(29, 48, 64);
+	--color-foreground: rgb(244, 242, 240);
+	transition: var(--transition);
+}
+
+.dark__mode .icon {
+	filter: invert(90%);
+}
