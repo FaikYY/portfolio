@@ -28,8 +28,15 @@
 		margin: 0;
 		padding: 0;
 	}
+
 	img {
 		height: 100%;
 		width: 100%;
+	}
+
+	@media (min-width: 1000px) {
+		button {
+			height: 2rem;
+		}
 	}
 </style>

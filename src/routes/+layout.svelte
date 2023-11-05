@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import '../app.css';
+	import leaf from '$lib/images/leaf.png';
 	import IconBox from './IconBox.svelte';
 </script>
 
@@ -8,7 +9,9 @@
 
 <div class="container">
 	<header>
-		<div id="logo">Faik Yesilyaprak</div>
+		<div id="logo__container">
+			Faik <img src={leaf} alt="" />
+		</div>
 
 		<nav>
 			<a href="/" aria-current={$page.url.pathname === '/' ? 'page' : undefined}> Home </a>
@@ -34,7 +37,7 @@
 <style>
 	.container {
 		/* background: red; */
-		gap: calc(16px + 1vw);
+		gap: 2rem;
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: calc(7.5vh + 7.5vw) 1fr;
@@ -57,15 +60,18 @@
 
 		position: sticky;
 		top: 0;
+		padding-bottom: 1rem;
 	}
 
 	nav {
-		/*   background: purple; */
+		/* background: purple; */
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
+		column-gap: 2rem;
+		flex-wrap: nowrap;
 		align-items: center;
 		width: 100%;
-		height: 100%;
+		height: 10%;
 	}
 
 	a {
@@ -82,19 +88,27 @@
 		color: var(--color-background);
 	}
 
+	#logo__container {
+		/* background: yellow; */
+		width: 100%;
+		height: 90%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.5rem;
+		letter-spacing: 0.25rem;
+		font-weight: 700;
+	}
+
+	#logo__container img {
+		margin-left: 1rem;
+		width: 1.5rem;
+	}
+
 	main {
 		/* background: blue; */
 		grid-column: 2/12;
-	}
-
-	#logo {
-		/* background: yellow; */
-		width: 100%;
-		height: 100%;
-
-		display: flex;
-		align-items: center;
-		font-size: 1.5rem;
 	}
 
 	footer {
@@ -102,5 +116,26 @@
 		justify-content: center;
 		align-items: center;
 		margin: 1rem;
+	}
+
+	@media (min-width: 1200px) {
+		.container {
+			grid-template-rows: calc(5vh + 5vw) 1fr;
+		}
+
+		nav {
+			column-gap: 6rem;
+		}
+	}
+
+	@media (min-width: 2000px) {
+		#logo__container {
+			height: 50%;
+		}
+
+		nav {
+			height: 50%;
+			align-items: flex-start;
+		}
 	}
 </style>

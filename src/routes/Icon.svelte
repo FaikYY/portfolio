@@ -10,6 +10,12 @@
 
 <style>
 	img {
-		width: clamp(1.5rem, 2vw, 2rem);
+		width: 2rem;
+	}
+
+	@media (min-width: 640px) {
+		img {
+			width: 1.5rem;
+		}
 	}
 </style>

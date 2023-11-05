@@ -30,7 +30,7 @@
 		width: 75%;
 		transform: translate(-50%, -50%);
 		border-radius: 0.5rem;
-		box-shadow: 0px 0px 6px 3px rgba(29, 48, 64, 0.05);
+		box-shadow: 0px 0px 6px 3px rgba(29, 48, 64, 0.15);
 		background-color: var(--color-background);
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
