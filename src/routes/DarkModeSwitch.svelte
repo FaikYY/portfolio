@@ -1,7 +1,8 @@
 <script>
 	import { isDarkMode } from '../store';
-	import light from '$lib/images/light.svg';
-	import dark from '$lib/images/dark.png';
+
+	const light = '☀️';
+	const dark = '🌙';
 
 	function toggleDarkMode() {
 		// Updating the CSS Class
@@ -14,24 +15,17 @@
 </script>
 
 <button on:click={toggleDarkMode}>
-	<img src={$isDarkMode ? dark : light} alt="Theme Icon" />
+	{$isDarkMode ? dark : light}
 </button>
-
-<!-- TODO: Fix the dark mode - moon background issue -->
 
 <style>
 	button {
 		border: none;
 		background-color: var(--color-background);
-		height: 2.5rem;
-		width: 2.5rem;
 		margin: 0;
 		padding: 0;
-	}
-
-	img {
-		height: 100%;
-		width: 100%;
+		font-size: 1.5rem;
+		height: 2.5rem;
 	}
 
 	@media (min-width: 1000px) {

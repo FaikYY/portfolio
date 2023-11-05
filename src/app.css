@@ -134,3 +134,7 @@ button:focus:not(:focus-visible) {
 .dark__mode .icon {
 	filter: invert(90%);
 }
+
+.dark__mode #icon__box {
+	border: 1px solid rgba(244, 242, 240, 1);
+}
